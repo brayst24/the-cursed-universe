@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b080d">
+  <meta name="description" content="Un pequeño universo creado para alguien especial.">
+  <title>YOU ARE MY SAFE PLACE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="sky" id="sky" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <button class="music-toggle" id="musicToggle"
+    aria-pressed="false" type="button">
+    ♫ Activar piano
+  </button>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">UN UNIVERSO HECHO PARA TI</p>
+
+      <div class="moon" aria-hidden="true">
+        <span>☾</span>
+      </div>
+
+      <p class="date">18 · X · 2025 — 18 · X · 2026</p>
+
+      <h1>365 DAYS FOR YOU</h1>
+
+      <p class="subtitle">
+        En un universo infinito, qué bonito fue coincidir contigo.
+      </p>
+
+      <button class="primary-button" id="enterButton" type="button">
+        Entrar a nuestro universo <span>✦</span>
+      </button>
+
+      <p class="hint">Desliza para descubrir nuestros recuerdos</p>
+    </section>
+
+    <section class="memories section" id="memories">
+      <p class="eyebrow">CONSTELACIÓN DE RECUERDOS</p>
+      <h2>Pequeños instantes, un universo entero</h2>
+      <p class="section-intro">
+        Cada estrella guarda un pedacito de nuestro lore juntoz.
+        Toca una para descubrirlo.
+      </p>
+
+      <div class="constellation" id="constellation">
+        <svg class="constellation-lines" viewBox="0 0 320 280"
+          preserveAspectRatio="none" aria-hidden="true">
+          <path d="M45 65 L145 40 L250 90 L185 175 L75 220 L250 90"
+            fill="none" stroke="currentColor" stroke-opacity=".4"
+            stroke-width="1"/>
+        </svg>
+
+        <button class="star star-one" data-memory="0"
+          aria-label="Descubrir recuerdo uno" type="button">
+          <span>✦</span><small>El comienzo</small>
+        </button>
+
+        <button class="star star-two" data-memory="1"
+          aria-label="Descubrir recuerdo dos" type="button">
+          <span>✧</span><small>Una coincidencia</small>
+        </button>
+
+        <button class="star star-three" data-memory="2"
+          aria-label="Descubrir recuerdo tres" type="button">
+          <span>✦</span><small>Un nuevo recuerdo</small>
+        </button>
+
+        <button class="star star-four" data-memory="3"
+          aria-label="Descubrir recuerdo cuatro" type="button">
+          <span>✧</span><small>Mi lugar favorito</small>
+        </button>
+
+        <button class="star star-five" data-memory="4"
+          aria-label="Descubrir recuerdo cinco" type="button">
+          <span>✦</span><small>Lo que sigue</small>
+        </button>
+      </div>
+
+      <p class="tiny-note">
+        Este mapa guarda cinco pequeños secretos. 🥀
+      </p>
+    </section>
+
+    <section class="letter-section section" id="letterSection">
+      <p class="eyebrow">UN MENSAJE ENTRE LAS ESTRELLAS</p>
+      <h2>Una carta para choe</h2>
+      <p class="section-intro">
+        Hay palabras que merecen su propio universo.
+      </p>
+
+      <button class="envelope" id="envelope" type="button"
+        aria-expanded="false" aria-controls="letter">
+        <span class="envelope-flap"></span>
+        <span class="envelope-paper">PARA ZHOE</span>
+        <span class="wax">✦</span>
+        <span class="envelope-label">ABRIR CARTA</span>
+      </button>
+
+      <article class="letter" id="letter" hidden>
+        <p class="letter-date">18 · X · 2026</p>
+        <h3>Para ti, que llegaste a mi universo</h3>
+        <div class="letter-body" id="letterBody"></div>
+
+        <button class="primary-button" id="secretButton" type="button">
+          Descubrir el último secreto ✦
+        </button>
+
+        <p class="final-secret" id="finalSecret" hidden>
+          De todas las personas que podría haber encontrado,
+          qué suerte la mía haber coincidido contigo. 🖤
+        </p>
+
+        <p class="signature">Con muzho cariño, vrayan .</p>
+      </article>
+    </section>
+
+    <footer>
+      <div class="footer-rose" aria-hidden="true">🥀</div>
+      <p>UN ENCUENTRO · MIL RECUERDOS</p>
+      <p class="footer-small">Creado con muzho cariño, amol y pokito sueño.</p>
+      <button class="text-button" id="backToTop" type="button">
+        Volver arriba lol ↑
+      </button>
+    </footer>
+  </main>
+
+  <dialog class="memory-dialog" id="memoryDialog">
+    <button class="close-dialog" id="closeDialog"
+      type="button" aria-label="Cerrar recuerdo">×</button>
+    <p class="eyebrow" id="memoryNumber">RECUERDO 01</p>
+    <h2 id="memoryTitle">El comienzo</h2>
+    <p id="memoryText"></p>
+    <span class="dialog-star">✦</span>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

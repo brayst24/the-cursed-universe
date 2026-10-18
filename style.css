@@ -1,0 +1,614 @@
+
+:root {
+  --night: #0b080d;
+  --wine: #721b36;
+  --rose: #d8a2b7;
+  --paper: #eadcc8;
+  --ink: #291820;
+  --muted: #bdaab7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 25px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #f4e8ef;
+  background:
+    radial-gradient(ellipse at 50% 12%, #351422 0%, transparent 40%),
+    var(--night);
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid #f1b9d0;
+  outline-offset: 5px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sky,
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sky {
+  z-index: -1;
+  overflow: hidden;
+}
+
+.vignette {
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 35%,
+    #050307a8 100%
+  );
+}
+
+.sky-star {
+  position: absolute;
+  color: #efd8e6;
+  animation: twinkle var(--duration, 3s) ease-in-out infinite alternate;
+  animation-delay: var(--delay, 0s);
+  user-select: none;
+}
+
+@keyframes twinkle {
+  from { opacity: .2; transform: scale(.75); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.music-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  padding: 10px 13px;
+  border: 1px solid #8f5369;
+  border-radius: 30px;
+  background: #150c14eF;
+  color: #f3dbe6;
+  font-size: 13px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.music-toggle[aria-pressed="true"] {
+  background: #572036;
+}
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 85px 22px 45px;
+}
+
+.eyebrow,
+.date,
+footer > p:first-of-type {
+  font-family: "Cinzel", Georgia, serif;
+  letter-spacing: 3px;
+  font-size: 10px;
+  color: var(--rose);
+}
+
+.moon {
+  display: grid;
+  place-items: center;
+  width: 125px;
+  height: 125px;
+  margin: 18px 0 14px;
+  border-radius: 50%;
+  color: #f0cbd7;
+  background: radial-gradient(circle at 40% 35%, #9a405b, #471728 65%, #170b13);
+  box-shadow: 0 0 40px #b02e523b, 0 0 100px #7d1e3c22;
+  animation: moonFloat 6s ease-in-out infinite;
+}
+
+.moon span {
+  font-size: 88px;
+  line-height: 1;
+  text-shadow: 0 0 25px #ffd8e4;
+}
+
+@keyframes moonFloat {
+  50% { transform: translateY(-7px); }
+}
+
+.date {
+  margin: 14px 0;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font: 500 clamp(31px, 7vw, 62px) "Cinzel", Georgia, serif;
+  margin: 10px 0;
+  text-shadow: 0 0 35px #ad315b65;
+}
+
+.subtitle {
+  max-width: 420px;
+  color: #d6c1cd;
+  font-size: clamp(19px, 4vw, 24px);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.primary-button {
+  padding: 13px 22px;
+  margin: 22px 0;
+  color: #f8eaf0;
+  background: linear-gradient(135deg, #652039, #32111f);
+  border: 1px solid #a45d76;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 28px #a02a4b44;
+}
+
+.primary-button span {
+  margin-left: 9px;
+}
+
+.hint,
+.tiny-note {
+  font-size: 15px;
+  color: #ad98a5;
+  font-style: italic;
+}
+
+.section {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.section h2 {
+  font: 500 clamp(24px, 5vw, 36px) "Cinzel", Georgia, serif;
+  margin: 12px 0;
+}
+
+.section-intro {
+  max-width: 480px;
+  margin: 14px auto 35px;
+  color: #c8b5c1;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.constellation {
+  position: relative;
+  width: min(100%, 480px);
+  height: 340px;
+  margin: 0 auto;
+  color: #b982a0;
+  background: radial-gradient(ellipse, #39172935, transparent 70%);
+}
+
+.constellation-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  color: #f5dce9;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.star span {
+  font-size: 34px;
+  text-shadow: 0 0 18px #f5b6d6;
+  animation: twinkle 2.4s ease-in-out infinite alternate;
+}
+
+.star small {
+  color: #cdb6c5;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.star:hover span {
+  color: white;
+  text-shadow: 0 0 28px #ff8ebc;
+  transform: scale(1.3);
+}
+
+.star-one { left: 14%; top: 23%; }
+.star-two { left: 45%; top: 14%; }
+.star-three { left: 79%; top: 32%; }
+.star-four { left: 58%; top: 65%; }
+.star-five { left: 24%; top: 82%; }
+
+.letter-section {
+  padding-top: 55px;
+}
+
+.envelope {
+  position: relative;
+  width: min(280px, 82vw);
+  height: 170px;
+  margin: 30px auto 10px;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #9c5269;
+  border-radius: 4px;
+  background: linear-gradient(145deg, #501a31, #210d19);
+  box-shadow: 0 18px 60px #0008, 0 0 30px #7b203b2b;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.envelope:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 65px #000b, 0 0 38px #9e31502f;
+}
+
+.envelope-flap {
+  position: absolute;
+  inset: 0 0 45% 0;
+  background: #6a2340;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  border-bottom: 1px solid #b56a85;
+}
+
+.envelope-paper {
+  position: absolute;
+  top: 22px;
+  left: 12px;
+  right: 12px;
+  color: #e5c5d3;
+  font-size: 19px;
+  font-style: italic;
+}
+
+.wax {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: #902841;
+  border: 2px solid #c8758b;
+  box-shadow: 0 0 20px #9d294d55;
+  font-size: 22px;
+}
+
+.envelope-label {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  color: #ddb3c4;
+  font: 10px "Cinzel", Georgia, serif;
+  letter-spacing: 3px;
+}
+
+.letter {
+  width: min(100%, 570px);
+  margin: 38px auto 0;
+  padding: clamp(22px, 6vw, 42px);
+  color: var(--ink);
+  text-align: left;
+  background:
+    radial-gradient(ellipse at top left, #fff5df, transparent 65%),
+    var(--paper);
+  border: 1px solid #b99a78;
+  box-shadow: 0 15px 60px #0009;
+  animation: appear .9s ease both;
+}
+
+.letter-date {
+  color: #7b3b4e;
+  text-align: right;
+}
+
+.letter h3 {
+  color: #55263a;
+  font: 500 clamp(22px, 5vw, 31px) "Cinzel", Georgia, serif;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.letter-body {
+  min-height: 80px;
+  font-size: 21px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.letter .primary-button {
+  display: block;
+  margin: 28px auto;
+}
+
+.final-secret {
+  color: #67233b;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.6;
+  font-style: italic;
+  animation: appear 1s ease both;
+}
+
+.signature {
+  margin-top: 35px;
+  text-align: right;
+  color: #67233b;
+  font-size: 21px;
+  font-style: italic;
+}
+
+footer {
+  padding: 50px 20px 35px;
+  text-align: center;
+}
+
+.footer-rose {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.footer-small {
+  color: #a996a3;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.text-button {
+  margin-top: 20px;
+  border: 0;
+  background: transparent;
+  color: var(--rose);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.memory-dialog {
+  width: min(420px, calc(100% - 36px));
+  padding: 38px 27px 27px;
+  color: #f4e7ee;
+  text-align: center;
+  background: linear-gradient(145deg, #29121f, #100b13);
+  border: 1px solid #8c4a64;
+  box-shadow: 0 0 100px #000b;
+}
+
+.memory-dialog::backdrop {
+  background: #050207d9;
+  backdrop-filter: blur(6px);
+}
+
+.memory-dialog h2 {
+  font: 500 27px "Cinzel", Georgia, serif;
+  color: #f1cedd;
+}
+
+.memory-dialog > p:not(.eyebrow) {
+  font-size: 21px;
+  line-height: 1.7;
+  color: #d5c1cd;
+}
+
+.dialog-star {
+  color: var(--rose);
+  font-size: 30px;
+}
+
+.close-dialog {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #e8c7d6;
+  background: transparent;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  padding: 12px 18px;
+  background: #351522;
+  border: 1px solid #8c4a64;
+  color: #f7e8ed;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+  z-index: 10;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  text-align: center;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .hero { padding-top: 90px; }
+  .eyebrow { letter-spacing: 2px; font-size: 9px; }
+  .moon { width: 105px; height: 105px; }
+  .moon span { font-size: 74px; }
+  .section { padding-top: 60px; padding-bottom: 60px; }
+  .constellation { height: 300px; }
+  .star small { font-size: 11px; }
+  .letter-body { font-size: 19px; }
+  .music-toggle { top: 10px; right: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ✦ Estrellas que viajan por el universo ✦ */
+
+.sky-star {
+  animation:
+    twinkle var(--duration, 3s) ease-in-out infinite alternate,
+    driftSideways var(--drift-duration, 18s) ease-in-out infinite alternate;
+
+  animation-delay:
+    var(--delay, 0s),
+    var(--drift-delay, 0s);
+
+  will-change: transform;
+}
+
+@keyframes driftSideways {
+  from {
+    translate: -30px 0;
+  }
+
+  to {
+    translate: 30px 0;
+  }
+}
+
+/* Distintas velocidades para crear profundidad */
+.sky-star:nth-child(3n) {
+  --drift-duration: 18s;
+}
+
+.sky-star:nth-child(3n + 1) {
+  --drift-duration: 25s;
+}
+
+.sky-star:nth-child(3n + 2) {
+  --drift-duration: 20s;
+}
+
+/* ✦ POLVO CÓSMICO GÓTICO ✦ */
+
+.cosmic-dust {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.dust-particle {
+  position: absolute;
+  width: var(--size, 2px);
+  height: var(--size, 2px);
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  border-radius: 50%;
+  background: #e9b5cc;
+  opacity: 0;
+  box-shadow: 0 0 8px #c85c87;
+  animation: dustFloat var(--speed, 15s) linear infinite;
+  animation-delay: var(--wait, 0s);
+}
+
+@keyframes dustFloat {
+  0% {
+    transform: translate3d(0, 25px, 0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: .65;
+  }
+
+  80% {
+    opacity: .3;
+  }
+
+  100% {
+    transform: translate3d(var(--drift, 45px), -100px, 0);
+    opacity: 0;
+  }
+}
+
+/* Brillo oscuro y rojizo en el espacio */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 20% 40%,
+      #79234220,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 65%,
+      #54205d20,
+      transparent 38%
+    );
+  animation: nebulaDrift 28s ease-in-out infinite alternate;
+}
+
+@keyframes nebulaDrift {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(2%, 1%, 0) scale(1.08);
+  }
+}
+
+/* Respetar la preferencia de reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .dust-particle,
+  body::before {
+    animation: none !important;
+  }
+}
+
