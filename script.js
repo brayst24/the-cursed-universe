@@ -132,68 +132,38 @@ memoryDialog.addEventListener("click", (event) => {
 // 4. ABRIR LA CARTA Y ESCRIBIRLA
 // ------------------------------------------
 
-const message = `A veces pienso en lo curioso que es la vida.
 
-Hace un año todavía no sabía todas las cosas
-bonitas, random y demaz que llegarían a mi vida después de conocerte.
-No sabía cuántos recuerdos terminaríamos creando,
-ni que una persona podría volverse tan especial
-simplemente siendo ella misma y es como fack 
-pork no sabia lo bonito que se puede sentir.
+const message = `A veces pienso en lo curiosa que es la vida.
 
-Por eso hice esto para ti.
-Quería crear algo bonito aparte de que vamos a 
-salir y azi sabes kjkdsjk. WaaAA me da mucho sentimieto
-haberte conocido pork juzto por estas mismas fechas
-tenia muchos problemas y sentia k mi mundo se estaba
-llendo a la mierda y aunke esos problemas no 
-desaparecieron, el que llegaras a mi vida hizo 
-que hubiera momentos wonitos en medio de tdo 
-eso. Y creo k eso es alko que no nunka te 
-habia dicho de esta manera. Hace un año nunka
-me hubiera imaginado ke una persona que apenas
-estaba conociendo se volveria alguien tan importante para mi.
-Me gudta la forma en que pco a poco nos fuimos azercando, 
-como epezamos hablando de cosas k nos gustan y terminamos 
-compartiendo momentoz que ahr recuerd con muzho kariño
-Desde nuestras conversaciones mas random hasta las veces 
-que hemos salido, ido al cine,visto mangas y todas esas 
-pequeñas cosas que tal vez parecen simples, pero que para mi 
-tienen algo especial pork las vivi contigo.Me gusta poder 
-conocerte un poquito mas cada dia, conocer tus gustos, 
-tus ocurrencias, tu forma de pensar y todas esas 
-pequeñas cosas que te hacen ser tu. Y aunque todavia me 
-falten muchisimas cosas por conocer de ti, espero poder seguir 
-haciendolo con el tiempo. Y  igual si algun dia llegas a tener
-un mal dia, te sientes triste o simplemente necesitas
-distraerte un rato, espero que tambien puedas encontrar conmigo
-un lugar donde ser tu misma, hablar de cualquier cosa o 
-simplemente pasar el rato sin tener que fingir nada.
-Si pudiera volver a aquel dia en el que te conoci, sabiendo 
-todo lo que se ahora, creo que volveria a hacerlo. Volveria a 
-hablarte, volveria a conocerte y volveria a vivir todos esos 
-momentos que nos trajeron hasta aqui. Pork si algo tengo claro
-es que me alegra muchisimo que nuestros caminos
-se hayan cruzado.Y bueno, despues de todo este texto jksdjks,
-creo que lo mas importante es decirte gracias.
+Hace un año todavía no sabía todas las cosas bonitas, random y demás que llegarían a mi vida después de conocerte. No sabía cuántos recuerdos terminaríamos creando, ni que una persona podría volverse tan especial simplemente siendo ella misma. Y es como fack, porque no sabía lo bonito que se puede sentir.
 
-Gracias por aparecer en mi vida, por las conversaciones, por 
-las risas, por los momentos que hemos compartido y por todas 
-esas pequeñas cosas que quizas haces sin darte cuenta, pero 
-que consiguen alegrarme el dia.Gracias por ser tu, zhoe 
-Por dejarme conocerte y por formar parte de mis recuerdos 
-mas bonitos de este ultimo año. Ojala este sea solamente el 
-principio de muchisimos recuerdos mas, de nuevas aventuras, 
-de canciones que algun dia nos recuerden a nosotros, de 
-peliculas que todavia nos falte ver y de momentos que aun no 
-sabemos que vamos a vivir pork entre tantas personas,
-tantas csualidades...tuve la suerte conocerte.
+Por eso hice esto para ti. Quería crear algo bonito, aparte de que vamos a salir y azi, sabes kjkdsjk. WaaAA, me da mucho sentimiento haberte conocido, porque justo por estas mismas fechas tenía muchos problemas y sentía que mi mundo se estaba yendo a la mierda. Y aunque esos problemas no desaparecieron, el que llegaras a mi vida hizo que hubiera momentos bonitos en medio de todo eso.
 
+Y creo que eso es algo que nunca te había dicho de esta manera.
 
-Feliz primer año desde que nuestros caminos
-se cruzaron.
+Hace un año nunca me hubiera imaginado que una persona que apenas estaba conociendo se volvería alguien tan importante para mí. Me gusta la forma en que poco a poco nos fuimos acercando, cómo empezamos hablando de cosas que nos gustan y terminamos compartiendo momentos que ahora recuerdo con mucho cariño.
 
-atte.vrayan...`;
+Desde nuestras conversaciones más random hasta las veces que hemos salido, ido al cine, visto mangas y todas esas pequeñas cosas que tal vez parecen simples, pero que para mí tienen algo especial porque las viví contigo.
+
+Me gusta poder conocerte un poquito más cada día, conocer tus gustos, tus ocurrencias, tu forma de pensar y todas esas pequeñas cosas que te hacen ser tú. Y aunque todavía me falten muchísimas cosas por conocer de ti, espero poder seguir haciéndolo con el tiempo.
+
+Y, si algún día llegas a tener un mal día, te sientes triste o simplemente necesitas distraerte un rato, espero que también puedas encontrar conmigo un lugar donde ser tú misma, hablar de cualquier cosa o simplemente pasar el rato sin tener que fingir nada.
+
+Si pudiera volver a aquel día en el que te conocí, sabiendo todo lo que sé ahora, creo que volvería a hacerlo. Volvería a hablarte, volvería a conocerte y volvería a vivir todos esos momentos que nos trajeron hasta aquí. Porque, si algo tengo claro, es que me alegra muchísimo que nuestros caminos se hayan cruzado.
+
+Y bueno, después de todo este texto jksdjks, creo que lo más importante es decirte gracias.
+
+Gracias por aparecer en mi vida, por las conversaciones, por las risas, por los momentos que hemos compartido y por todas esas pequeñas cosas que quizás haces sin darte cuenta, pero que consiguen alegrarme el día.
+
+Gracias por ser tú, Zoe. Por dejarme conocerte y por formar parte de mis recuerdos más bonitos de este último año.
+
+Ojalá este sea solamente el principio de muchísimos recuerdos más, de nuevas aventuras, de canciones que algún día nos recuerden a nosotros, de películas que todavía nos falte ver y de momentos que aún no sabemos que vamos a vivir. Porque, entre tantas personas y tantas casualidades, tuve la suerte de conocerte.
+
+Feliz primer año desde que nuestros caminos se cruzaron.
+
+Atte.:
+Bryan...`;
+
 
 let letterOpened = false;
 let typingTimer;
